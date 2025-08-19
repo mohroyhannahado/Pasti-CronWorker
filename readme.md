@@ -34,7 +34,7 @@ Saya membuat ini untuk sedikit membantu para pecinta HomeLab dengan spek server 
 ## 🧱 Struktur
 
 ```
-/var/www/
+/var/www/kron/
  ├─ db.php       # koneksi & helper MySQLi
  ├─ worker.php   # script worker
  └─ index.php    # UI CRUD task
@@ -178,3 +178,5 @@ GitHub: [@mohroyhannahado](https://github.com/mohroyhannahado)
 Instagram: [@bangroyhan](https://www.instagram.com/bangroyhan/)
 X / Twitter: [@serpentroy](https://x.com/serpentroy)
 Threads: [@bangroyhan](https://www.threads.com/@bangroyhan)
+
+![Histats](https://sstatic1.histats.com/0.gif?4971233&101)
