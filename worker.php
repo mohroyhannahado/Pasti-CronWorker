@@ -266,7 +266,6 @@ foreach ($tasks as $t) {
         fclose($tfp);
     }
 }
-
 // lepas global lock
 flock($gfp, LOCK_UN);
 fclose($gfp);
