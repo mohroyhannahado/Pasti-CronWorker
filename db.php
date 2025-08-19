@@ -6,16 +6,14 @@ declare(strict_types=1);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 class DB {
-    /** @var mysqli */
     public $conn;
-
     public function __construct() {
         // GANTI KREDENSIAL
-        $host = 'localhost';
-        $user = 'root';
-        $pass = 'password';
-        $name = 'nama_database';
-        $port = 3306;
+        $host = 'localhost';		// 127.0.0.1 atau IP server mysql
+        $user = 'root';				// user mysql
+        $pass = 'password';			// password mysql
+        $name = 'nama_database';	// database
+        $port = 3306;				// port
 
         $this->conn = new mysqli($host, $user, $pass, $name, $port);
         $this->conn->set_charset('utf8mb4');
