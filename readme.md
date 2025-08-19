@@ -174,9 +174,9 @@ MIT License — bebas digunakan & dimodifikasi.
 ## 👤 Author
 
 **Bang Roy (Moh. Royhan Nahado)**
-GitHub: [@mohroyhannahado](https://github.com/mohroyhannahado)
-Instagram: [@bangroyhan](https://www.instagram.com/bangroyhan/)
-X / Twitter: [@serpentroy](https://x.com/serpentroy)
-Threads: [@bangroyhan](https://www.threads.com/@bangroyhan)
+* GitHub: [@mohroyhannahado](https://github.com/mohroyhannahado)
+* Instagram: [@bangroyhan](https://www.instagram.com/bangroyhan/)
+* X / Twitter: [@serpentroy](https://x.com/serpentroy)
+* Threads: [@bangroyhan](https://www.threads.com/@bangroyhan)
 
 ![Histats](https://sstatic1.histats.com/0.gif?4971233&101)
