@@ -228,7 +228,6 @@ document.addEventListener('DOMContentLoaded', onSchedTypeChange);
 </head>
 <body>
 <h1>🛠️ Pasti CronWorker — Task Manager</h1>
-
 <?php if ($flash): ?><div class="flash"><?=h($flash)?></div><?php endif; ?>
 <?php if ($errors): ?>
   <div class="errors"><strong>Terjadi kesalahan:</strong><ul><?php foreach($errors as $e){echo '<li>'.h($e).'</li>'; } ?></ul></div>
@@ -244,7 +243,7 @@ document.addEventListener('DOMContentLoaded', onSchedTypeChange);
       <label>Nama</label>
       <input type="text" name="name" required value="<?=h($editTask['name'] ?? '')?>">
 
-      <label>CMD (path PHP di server)</label>
+      <label>Path</label>
       <input type="text" name="cmd" required class="mono" placeholder="/var/www/shopee.php" value="<?=h($editTask['cmd'] ?? '')?>">
       <div class="muted small">Harus file <code>.php</code> yang ada di server.</div>
 
@@ -257,8 +256,8 @@ document.addEventListener('DOMContentLoaded', onSchedTypeChange);
           <label>Schedule Type</label>
           <select name="schedule_type" id="schedule_type" onchange="onSchedTypeChange()">
             <?php $st=$editTask['schedule_type']??'interval'; ?>
-            <option value="interval" <?= $st==='interval'?'selected':''; ?>>interval</option>
-            <option value="daily"    <?= $st==='daily'?'selected':'';    ?>>daily (HH:MM WIB)</option>
+            <option value="interval" <?= $st==='interval'?'selected':''; ?>>Interval</option>
+            <option value="daily"    <?= $st==='daily'?'selected':'';    ?>>Daily (HH:MM WIB)</option>
           </select>
         </div>
       </div>
