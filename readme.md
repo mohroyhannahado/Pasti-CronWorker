@@ -5,12 +5,10 @@ Worker dijalankan setiap **20 detik** (via crontab + `sleep` offset), menyimpan 
 
 Saya membuat ini untuk sedikit membantu para pecinta HomeLab dengan spek server **Kere Hore** agar bisa menjalankan CronJob banyak namun gak bikin server ngebul.
 
-[![CI](https://github.com/mohroyhannahado/Pasti-CronWorker/actions/workflows/php-ci.yml/badge.svg)](https://github.com/mohroyhannahado/Pasti-CronWorker/actions/workflows/php-ci.yml)
-![PHP](https://img.shields.io/badge/PHP-8.1%20%7C%208.2%20%7C%208.3-777bb3)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Issues](https://img.shields.io/github/issues/mohroyhannahado/Pasti-CronWorker)
-![Stars](https://img.shields.io/github/stars/mohroyhannahado/Pasti-CronWorker)
-
+* [![PHP](https://img.shields.io/badge/PHP-8.1%20%7C%208.2%20%7C%208.3-777bb3)](https://github.com/php)
+* [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/mohroyhannahado/Pasti-CronWorker/blob/main/LICENSE)
+* [![Issues](https://img.shields.io/github/issues/mohroyhannahado/Pasti-CronWorker)](https://github.com/mohroyhannahado/Pasti-CronWorker/issues)
+* ![Stars](https://img.shields.io/github/stars/mohroyhannahado/Pasti-CronWorker)
 
 > Timezone default: **Asia/Jakarta**.
 
@@ -173,10 +171,14 @@ MIT License — bebas digunakan & dimodifikasi.
 
 ## 👤 Author
 
-**Bang Roy (Moh. Royhan Nahado)**
+**Bang Roy Han (Moh. Royhan Nahado)**
 * GitHub: [@mohroyhannahado](https://github.com/mohroyhannahado)
 * Instagram: [@bangroyhan](https://www.instagram.com/bangroyhan/)
 * X / Twitter: [@serpentroy](https://x.com/serpentroy)
 * Threads: [@bangroyhan](https://www.threads.com/@bangroyhan)
+* Blog: [bangroyhan.pasti.in](https://bangroyhan.pasti.in)
+* Tulisan: [Slawi AYu](https://www.slawiayu.com/penulis/bangroy.html)
 
 ![Histats](https://sstatic1.histats.com/0.gif?4971233&101)
+
+[![Flag](https://s01.flagcounter.com/count2/nvWz/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_GIT/labels_1/pageviews_1/flags_1/percent_0/)](https://s01.flagcounter.com/more/nvWz)
