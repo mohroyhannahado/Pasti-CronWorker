@@ -130,7 +130,7 @@ Tabel utama: `cron_tasks`.
 	* * * * * (sleep 55; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
 	```
 
-5. **Buka UI** → `http://127.0.0.1/index.php` dashboard Pasti CronWorker.
+5. **Buka UI** → `http://127.0.0.1/kron/index.php` dashboard Pasti CronWorker.
 
 ---
 
