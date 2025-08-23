@@ -32,7 +32,7 @@ Saya membuat ini untuk sedikit membantu para pecinta HomeLab dengan spek server 
 ## 🧱 Struktur
 
 ```
-/var/www/kron/
+/var/www/html/kron/
  ├─ db.php       # koneksi & helper MySQLi
  ├─ worker.php   # script worker
  └─ index.php    # UI CRUD task
@@ -54,12 +54,12 @@ Tabel utama: `cron_tasks`.
 
 ## 🚀 Instalasi
 
-1. **Clone/copy source** ke `/var/www/kron` atau direktori web lain:
+1. **Clone/copy source** ke `/var/www/html/kron` atau direktori web lain:
 
    ```
-   /var/www/kron/db.php
-   /var/www/kron/worker.php
-   /var/www/kron/index.php
+   /var/www/html/kron/db.php
+   /var/www/html/kron/worker.php
+   /var/www/html/kron/index.php
    ```
 
 2. **Import SQL tabel** ke database MySQL:
@@ -97,22 +97,40 @@ Tabel utama: `cron_tasks`.
    INSERT INTO `cron_tasks`
    (`name`,`cmd`,`schedule_type`,`interval_sec`,`interval_unit`,`enabled`,`next_run_at`,`run_timeout_sec`,`max_retries`,`status`)
    VALUES
-   ('Shopee Scraper', '/var/www/shopee.php', 'interval', 60, 60, 0, NOW(), 600, 0, 'idle'),
-   ('Ping IP', '/var/www/ip.php', 'interval', 120, 60, 0, NOW(), 600, 0, 'idle'),
-   ('Forex API', '/var/www/harga.php', 'interval', 30, 1, 0, NOW(), 600, 0, 'idle');
+   ('Shopee Scraper', '/var/www/html/shopee.php', 'interval', 60, 60, 0, NOW(), 600, 0, 'idle'),
+   ('Ping IP', '/var/www/html/ip.php', 'interval', 120, 60, 0, NOW(), 600, 0, 'idle'),
+   ('Forex API', '/var/www/html/harga.php', 'interval', 30, 1, 0, NOW(), 600, 0, 'idle');
    ```
 
 3. **Sesuaikan `db.php`** dengan MySQL kamu.
 
-4. **Pasang cron** tiap 20 detik:
+4. **Pasang cron**
+
+   ***tiap 20 detik:***
 
    ```cron
-   * * * * * /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/kron/worker.php
-   * * * * * (sleep 20; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/kron/worker.php)
-   * * * * * (sleep 40; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/kron/worker.php)
+   * * * * * /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php
+   * * * * * (sleep 20; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+   * * * * * (sleep 40; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
    ```
+   
+   ***tiap 5 detik***
+	```cron	
+	* * * * * /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php
+	* * * * * (sleep 5;  /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 10; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 15; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 20; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 25; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 30; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 35; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 40; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 45; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 50; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	* * * * * (sleep 55; /usr/bin/flock -n /tmp/pasti_cron_tick.lock /usr/bin/php /var/www/html/kron/worker.php)
+	```
 
-5. **Buka UI** → `http://server/index.php` dashboard Pasti CronWorker.
+5. **Buka UI** → `http://127.0.0.1/index.php` dashboard Pasti CronWorker.
 
 ---
 
