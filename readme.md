@@ -1,7 +1,7 @@
 # Pasti CronWorker
 
 Sistem **Managed Cron** untuk menjalankan script PHP di Ubuntu + Apache/PHP + MySQLi.
-Worker dijalankan setiap **20 detik** (via crontab + `sleep` offset), menyimpan jadwal & log eksekusi di MySQL, mendukung **interval** (detik/menit/jam/hari) maupun **jadwal harian HH\:MM (WIB)**, lengkap dengan penguncian per-task, timeout, auto retry dan UI CRUD berbasis web.
+Worker dijalankan setiap **20 detik / 5 detik** (via crontab + `sleep` offset), menyimpan jadwal & log eksekusi di MySQL, mendukung **interval** (detik/menit/jam/hari) maupun **jadwal harian HH\:MM (WIB)**, lengkap dengan penguncian per-task, timeout, auto retry dan UI CRUD berbasis web.
 
 Saya membuat ini untuk sedikit membantu para pecinta HomeLab dengan spek server **Kere Hore** agar bisa menjalankan CronJob banyak namun gak bikin server ngebul.
 
@@ -19,7 +19,7 @@ Saya membuat ini untuk sedikit membantu para pecinta HomeLab dengan spek server 
 
 * **Terpusat di Database** → semua jadwal dikelola lewat tabel MySQL.
 * **Interval & Harian** → jadwal berbasis interval detik atau jam harian tertentu.
-* **Worker per 20 detik** → dijalankan dengan kombinasi cron `0/20/40s`.
+* **Worker per 5 detik** → dijalankan dengan kombinasi cron.
 * **Locking** → global + per-task (`flock`) agar tidak jalan dobel.
 * **Args aman** → bisa string biasa atau JSON array (setiap item di-escape).
 * **Timeout** → hentikan proses yang menggantung.
